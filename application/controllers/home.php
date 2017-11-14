@@ -25,6 +25,11 @@ class Home extends CI_Controller {
 	var $og_image = "https://daks2k3a4ib2z.cloudfront.net/58cad0536f26f255683f2ebf/59fc0c4a015c8e0001b68a85_59ea4f0379b8c2000147adb6_withthe2r.jpg";
 	var $og_url = "";
 
+	function __construct() {
+		parent::__construct();	
+		
+	}
+
     function checkRedirectUrl($ad_param = null) {
         if (!$ad_param) {
             return null;
