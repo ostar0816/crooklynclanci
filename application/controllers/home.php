@@ -127,6 +127,9 @@ class Home extends CI_Controller {
 
 	public function index($ad_param = null)
 	{
+		$ad_param = str_replace("&", rawurlencode("&"), $ad_param);
+		// echo $ad_param;
+
 		$this->root_url = base_url();
 		$this->og_url = $ad_param ? $this->root_url . $ad_param : $this->root_url;
 		$redirect_url = $this->checkRedirectUrl($ad_param);
