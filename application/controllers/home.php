@@ -59,9 +59,9 @@ class Home extends CI_Controller {
 			curl_close( $ch );
 			// echo "<br>response = " . $response;
 			if (!$err && json_decode($response) != "invalid id") {
-				$editorAd = json_decode($response)->EditorAd;
-				
-				if ($editorAd) {
+				if (isset(json_decode($response)->EditorAd)) {
+					$editorAd = json_decode($response)->EditorAd;
+					
 					// var_dump($editorAd);
 					if (isset($editorAd->adTitle)) {
 						$this->og_title = $editorAd->adTitle;
@@ -69,7 +69,7 @@ class Home extends CI_Controller {
 					if (isset($editorAd->adDescription)) {
 						$this->og_description = $editorAd->adDescription;
 					}
-					if ($editorAd->adMainImageFullUrl) {
+					if (isset($editorAd->adMainImageFullUrl)) {
 						$this->og_image = $editorAd->adMainImageFullUrl;                    
 					}
 					$redirect_url = self::API_ROOT_URL . "/#/pages/tracks/ads/" . $ad_param;      					
@@ -102,17 +102,19 @@ class Home extends CI_Controller {
 			curl_close( $ch );
 			//  echo "<br>response = " . $response;
 			if (!$err && json_decode($response) != "not found") {
-				$editor = json_decode($response)->Editor;
-				
-				if ($editor) {
-					$this->og_title = $editor->stageName;
+				if (isset(json_decode($response)->Editor)) {
+					$editor = json_decode($response)->Editor;
+					
+					if (isset($editor->stageName)) {
+						$this->og_title = $editor->stageName;
+					}
 					if (isset($editor->biography) && strlen($editor->biography) > 0) {
 						$description = $editor->biography;
 						$description = str_replace("<p>", "", $description);
 						$description = str_replace("</p>", "", $description);
 						$this->og_description = str_replace("\"", "'", $description);
 					}
-					if ($editor->logoSquare) {
+					if (isset($editor->logoSquare)) {
 						$this->og_image = "https:" . $editor->logoSquare->url;
 					}
 					$redirect_url = self::API_ROOT_URL . "/#/pages/tracks/ads/" . $ad_param;					
