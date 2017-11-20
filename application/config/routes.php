@@ -53,6 +53,7 @@ $route['membershipagreement'] = 'membershipagreement';
 $route['termsofuse'] = 'termsofuse';
 $route['privacypolicy'] = 'privacypolicy';
 $route['contactus'] = 'contactus';
+$route['maintenance'] = 'maintenance';
 
 $route['indexmain'] = 'indexmain';
 $route['gearshop'] = 'gearshop';

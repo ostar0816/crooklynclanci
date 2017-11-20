@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!--  End Facebook Pixel Code  -->
   <?php
     if ($redirect_url) {
-        echo "<script type='text/javascript'>document.location.href='{$redirect_url}';</script>";  //Redirect to the vault store
+        // echo "<script type='text/javascript'>document.location.href='{$redirect_url}';</script>";  //Redirect to the vault store
     } 
   ?>
 

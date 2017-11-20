@@ -1,0 +1,37 @@
+.maintenance-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    background-color: #1b1b1b;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.maintenance-container .page-row {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 0 50%;
+    flex: 0 50%;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.maintenance-container .page-top {
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+.maintenance-container .page-row .title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+}
+
+.maintenance-container .page-row .description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}

@@ -18,7 +18,6 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	var $root_url = "";
 	const API_ROOT_URL = "https://v2-beta.crooklynclan.net"; //Product
 	// const API_ROOT_URL = "https://crooklyn-clan-staging.herokuapp.com"; //Staging
 
@@ -110,14 +109,14 @@ class Home extends CI_Controller {
 					$editorAd = json_decode($response)->EditorAd;
 					
 					// var_dump($editorAd);
-					if (isset($editorAd->adTitle)) {
+					if (isset($editorAd->adTitle) && strlen($editorAd->adTitle) > 0) {
 						$this->og_title = $editorAd->adTitle;
 					}
-					if (isset($editorAd->adDescription)) {
+					if (isset($editorAd->adDescription) && strlen($editorAd->adDescription) > 0) {
 						$this->og_description = $editorAd->adDescription;
 					}
 					if (isset($editorAd->adMainImageFullUrl)) {
-						$this->og_image = $editorAd->adMainImageFullUrl;                    
+						// $this->og_image = $editorAd->adMainImageFullUrl; //Disable showing an ad image until we have good ones
 					}					
 					$redirect_url = self::API_ROOT_URL . "/#/pages/tracks/ads/" . $editorAd->_id;      					
 				} else {
@@ -134,10 +133,7 @@ class Home extends CI_Controller {
 		$stagename = str_replace("&", rawurlencode("&"), $stagename);
 		$ad_type = str_replace("&", rawurlencode("&"), $ad_type);
 		
-		// echo $stagename;
-
-		$this->root_url = base_url();
-		$this->og_url = $stagename ? $this->root_url . $stagename : $this->root_url;
+		$this->og_url = current_url();
 		$redirect_url = $this->checkRedirectUrl($stagename, $ad_type);
 		
 		$data['og_title'] = $this->og_title;
