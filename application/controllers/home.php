@@ -18,8 +18,8 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	const API_ROOT_URL = "https://v2-beta.crooklynclan.net"; //Product
-	// const API_ROOT_URL = "https://crooklyn-clan-staging.herokuapp.com"; //Staging
+	// const API_ROOT_URL = "https://v2-beta.crooklynclan.net"; //Product
+	const API_ROOT_URL = "https://crooklyn-clan-staging.herokuapp.com"; //Staging
 
 	var $og_title = "Welcome To The Crooklyn Clan Vault 2.0!";
 	var $og_description = "While we are in beta please use the Google Chrome browser.";
@@ -31,8 +31,8 @@ class Home extends CI_Controller {
 		
 	}
 
-    function checkRedirectUrl($stagename = null, $ad_type = null) {
-        if (!$stagename) {
+    function checkRedirectUrl($currency_slug = null, $stagename = null, $ad_type = null) {
+        if (!$currency_slug || !$stagename) {
             return null;
 		}
 		$redirect_url = null;
@@ -82,7 +82,7 @@ class Home extends CI_Controller {
 			}
 		}
 		if ($redirect_url && $ad_type) {
-			$url = self::API_ROOT_URL . "/api/v1/members/account/editorads/" . $stagename . "/" . $ad_type . "/getByStagenameAndType";
+			$url = self::API_ROOT_URL . "/api/v1/members/account/editorads/" . $currency_slug . "/" . $stagename . "/" . $ad_type . "/getByStagenameAndType";
 			$options = array(
 				CURLOPT_RETURNTRANSFER => true,     // return web page
 				CURLOPT_HEADER         => false,    // don't return headers
@@ -122,19 +122,21 @@ class Home extends CI_Controller {
 				} else {
 					$redirect_url = null;
 				}
+			} else {
+				$redirect_url = null;				
 			}
 		}
 		
         return $redirect_url;
     }
 
-	public function index($stagename = null, $ad_type = null)
+	public function index($currency_slug = null, $stagename = null, $ad_type = null)
 	{
 		$stagename = str_replace("&", rawurlencode("&"), $stagename);
 		$ad_type = str_replace("&", rawurlencode("&"), $ad_type);
 		
 		$this->og_url = current_url();
-		$redirect_url = $this->checkRedirectUrl($stagename, $ad_type);
+		$redirect_url = $this->checkRedirectUrl($currency_slug, $stagename, $ad_type);
 		
 		$data['og_title'] = $this->og_title;
 		$data['og_description'] = $this->og_description;

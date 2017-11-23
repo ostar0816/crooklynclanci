@@ -61,8 +61,8 @@ $route['promotemusic'] = 'promotemusic';
 $route['apply'] = 'apply';
 $route['sras-in-depth'] = 'sras_in_depth';
 
+$route['(:any)/(:any)/(:any)'] = 'home/index/$1/$2/$3';
 $route['(:any)/(:any)'] = 'home/index/$1/$2';
-$route['(:any)'] = 'home/index/$1';
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
