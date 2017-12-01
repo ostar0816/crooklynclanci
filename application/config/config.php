@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-// $config['base_url'] = 'https://www.crooklynclan.net/'; //Empty this in localhost
-$config['base_url'] = ''; //Empty this in localhost
+$config['base_url'] = 'https://www.crooklynclan.net/'; //Empty this in localhost
+// $config['base_url'] = ''; //Empty this in localhost
 /*
 |--------------------------------------------------------------------------
 | Index File

@@ -18,8 +18,8 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	// const API_ROOT_URL = "https://v2-beta.crooklynclan.net"; //Product
-	const API_ROOT_URL = "https://crooklyn-clan-staging.herokuapp.com"; //Staging
+	const API_ROOT_URL = "https://v2-beta.crooklynclan.net"; //Product
+	// const API_ROOT_URL = "https://crooklyn-clan-staging.herokuapp.com"; //Staging
 
 	var $og_title = "Welcome To The Crooklyn Clan Vault 2.0!";
 	var $og_description = "While we are in beta please use the Google Chrome browser.";
@@ -75,7 +75,7 @@ class Home extends CI_Controller {
 					if (isset($editor->logoSquare)) {
 						$this->og_image = "https:" . $editor->logoSquare->url;
 					}
-					$redirect_url = self::API_ROOT_URL . "/#/pages/tracks/ads/" . $stagename;					
+					$redirect_url = self::API_ROOT_URL . "/#/pages/tracks/ads/" . $currency_slug . "/" . $stagename;					
 				} else {
 					$redirect_url = null;                
 				}
