@@ -20,6 +20,7 @@ class Home extends CI_Controller {
 	 */
 	const API_ROOT_URL = "https://v2-beta.crooklynclan.net"; //Product
 	// const API_ROOT_URL = "https://crooklyn-clan-staging.herokuapp.com"; //Staging
+	// const API_ROOT_URL = "https://192.168.0.85"; //Localhost
 
 	var $og_title = "Welcome To The Crooklyn Clan Vault 2.0!";
 	var $og_description = "While we are in beta please use the Google Chrome browser.";
@@ -75,7 +76,7 @@ class Home extends CI_Controller {
 					if (isset($editor->logoSquare)) {
 						$this->og_image = "https:" . $editor->logoSquare->url;
 					}
-					$redirect_url = self::API_ROOT_URL . "/#/pages/tracks/ads/" . $currency_slug . "/" . $stagename;					
+					$redirect_url = self::API_ROOT_URL . "/editors/" . $stagename . "/" . $currency_slug;					
 				} else {
 					$redirect_url = null;                
 				}
@@ -118,7 +119,7 @@ class Home extends CI_Controller {
 					if (isset($editorAd->adMainImageFullUrl)) {
 						// $this->og_image = $editorAd->adMainImageFullUrl; //Disable showing an ad image until we have good ones
 					}					
-					$redirect_url = self::API_ROOT_URL . "/#/pages/tracks/ads/" . $editorAd->_id;      					
+					$redirect_url = self::API_ROOT_URL . "/tracks/ads/" . $editorAd->_id;      					
 				} else {
 					$redirect_url = null;
 				}
@@ -137,7 +138,7 @@ class Home extends CI_Controller {
 		
 		$this->og_url = current_url();
 		$redirect_url = $this->checkRedirectUrl($currency_slug, $stagename, $ad_type);
-		
+
 		$data['og_title'] = $this->og_title;
 		$data['og_description'] = $this->og_description;
 		$data['og_url'] = $this->og_url;
