@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <a href="home" class="brand-link w-nav-brand">
         <h1 class="logo"></h1>
       </a>
-      <nav role="navigation" class="nav-menu w-nav-menu"><a href="aboutus" class="nav-link w-nav-link w--current">aBOUT<br>US</a><a href="howitworks" class="nav-link w-nav-link">how<br>it works</a><a href="hottracks" class="nav-link w-nav-link"><span class="text-span-5">Hot</span><br>tracks</a><a href="oureditors" class="nav-link w-nav-link">our<br>editors</a><a href="gearshop" target="_blank" class="nav-link gs w-nav-link">gear<br>shop</a><a href="contact" class="nav-link ctu w-nav-link">contact<br>us</a><a href="login-signup" class="nav-link lisu w-nav-link">Login / Signup</a></nav>
+      <nav role="navigation" class="nav-menu w-nav-menu"><a href="aboutus" class="nav-link w-nav-link w--current">aBOUT<br>US</a><a href="howitworks" class="nav-link w-nav-link">how<br>it works</a><a href="hottracks" class="nav-link w-nav-link"><span class="text-span-5">Hot</span><br>tracks</a><a href="oureditors" class="nav-link w-nav-link">our<br>editors</a><a href="gearshop" target="_blank" class="nav-link gs w-nav-link">gear<br>shop</a><a href="contact" class="nav-link ctu w-nav-link">contact<br>us</a><a href="<?php echo config_item('front_url'); ?>" class="nav-link lisu w-nav-link">Login / Signup</a></nav>
       <div class="menu-button w-nav-button"><img src="images/raydee.png"></div>
     </div>
   </div>

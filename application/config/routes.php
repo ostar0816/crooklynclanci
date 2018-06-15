@@ -54,11 +54,7 @@ $route['termsofuse'] = 'termsofuse';
 $route['privacypolicy'] = 'privacypolicy';
 $route['maintenance'] = 'maintenance';
 
-$route['indexmain'] = 'indexmain';
 $route['gearshop'] = 'gearshop';
-$route['promotemusic'] = 'promotemusic';
-$route['apply'] = 'apply';
-$route['sras-in-depth'] = 'sras_in_depth';
 
 $route['aboutus'] = 'aboutus';
 $route['howitworks'] = 'howitworks';

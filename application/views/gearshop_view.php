@@ -9,6 +9,7 @@
   <link href="<?php echo base_url(); ?>css/normalize.css" rel="stylesheet" type="text/css">
   <link href="<?php echo base_url(); ?>css/components.css" rel="stylesheet" type="text/css">
   <link href="<?php echo base_url(); ?>css/crooklynmain.css" rel="stylesheet" type="text/css">
+  <link href="css/eqproj.webflow.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Great Vibes:400","Merriweather:300,300italic,400,400italic,700,700italic,900,900italic","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Permanent Marker:regular"]  }});</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
@@ -70,9 +71,12 @@
   <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 </head>
 <body>
-  <div data-collapse="medium" data-animation="default" data-duration="400" class="navbarmain w-nav"><a href="#" class="headerlogoholder w-nav-brand"><img src="images/logo-cc2NEW.png" srcset="images/logo-cc2NEW-p-500x244.png 500w, images/logo-cc2NEW-p-800x390.png 800w, images/logo-cc2NEW-p-1080x527.png 1080w, images/logo-cc2NEW-p-1600x780.png 1600w, images/logo-cc2NEW-p-2000x975.png 2000w, images/logo-cc2NEW-p-2600x1267.png 2600w, images/logo-cc2NEW.png 3449w" sizes="(max-width: 479px) 270px, (max-width: 767px) 290px, 300px" class="headerlogo"></a>
+  <div data-collapse="medium" data-animation="default" data-duration="400" class="navbarmain w-nav">
+    <a href="home" class="brand-link w-nav-brand">
+      <h1 class="logo"></h1>
+    </a>
     <div class="fb w-widget w-widget-facebook"><iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fcrooklynclan&amp;layout=button_count&amp;locale=en_US&amp;action=like&amp;show_faces=false&amp;share=false" scrolling="no" frameborder="0" allowtransparency="true" style="border: none; overflow: hidden; width: 225px; height: 35px;"></iframe></div>
-    <nav role="navigation" class="w-nav-menu"><a href="indexmain" class="nav-link-2 w-nav-link">Home</a><a href="javascript:history.back();" class="nav-link-2 w-nav-link">Back</a></nav>
+    <nav role="navigation" class="w-nav-menu"><a href="aboutus" class="nav-link-2 w-nav-link">Home</a><a href="javascript:history.back();" class="nav-link-2 w-nav-link">Back</a></nav>
     <div class="menu-button-3 w-nav-button">
       <div class="w-icon-nav-menu"></div>
     </div>
