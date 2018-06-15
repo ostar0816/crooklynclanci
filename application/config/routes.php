@@ -52,7 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['membershipagreement'] = 'membershipagreement';
 $route['termsofuse'] = 'termsofuse';
 $route['privacypolicy'] = 'privacypolicy';
-$route['contactus'] = 'contactus';
 $route['maintenance'] = 'maintenance';
 
 $route['indexmain'] = 'indexmain';
@@ -60,6 +59,12 @@ $route['gearshop'] = 'gearshop';
 $route['promotemusic'] = 'promotemusic';
 $route['apply'] = 'apply';
 $route['sras-in-depth'] = 'sras_in_depth';
+
+$route['aboutus'] = 'aboutus';
+$route['howitworks'] = 'howitworks';
+$route['hottracks'] = 'hottracks';
+$route['oureditors'] = 'oureditors';
+$route['contact'] = 'contact';
 
 $route['(:any)/(:any)/(:any)'] = 'home/index/$1/$2/$3';
 $route['(:any)/(:any)'] = 'home/index/$1/$2';
