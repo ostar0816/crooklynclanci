@@ -7,8 +7,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html data-wf-page="5af004d3f167d6645a69c8af" data-wf-site="5af004d3f167d61c5a69c8a7">
 <head>
   <meta charset="utf-8">
-  <title>Home</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Welcome To The Crooklyn Clan Vault 2.0!</title>
+  <meta content="While we are in beta, please use Google Chrome browser." name="description">
+  <meta content="<?php echo $og_title?>" property="og:title" />
+  <meta content="<?php echo $og_description?>" property="og:description" />
+  <meta content="website" property="og:type" />
+  <meta content="<?php echo $og_url?>" property="og:url" />
+  <meta content="<?php echo $og_image?>" property="og:image" />
+  <meta property="og:image:width" content="500">
+  <meta property="og:image:height" content="500">
+  <meta content="summary" name="twitter:card" />
+  <meta property="og:updated_time" content="<?=time()?>" />
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
