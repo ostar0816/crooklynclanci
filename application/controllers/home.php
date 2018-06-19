@@ -18,9 +18,7 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	const API_ROOT_URL = "https://v2-beta.crooklynclan.net"; //Product
-	// const API_ROOT_URL = "https://crooklyn-clan-staging.herokuapp.com"; //Staging
-	// const API_ROOT_URL = "https://192.168.0.85"; //Localhost
+	var $api_root_url = "";
 
 	var $og_title = "Welcome To The Crooklyn Clan Vault 2.0!";
 	var $og_description = "While we are in beta please use the Google Chrome browser.";
@@ -29,7 +27,7 @@ class Home extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();	
-		
+		$this->api_root_url = config_item('api_root_url');
 	}
 
     function checkRedirectUrl($currency_slug = null, $stagename = null, $ad_type = null) {
@@ -38,7 +36,7 @@ class Home extends CI_Controller {
 		}
 		$redirect_url = null;
 		if ($stagename) {
-			$url = self::API_ROOT_URL . "/api/v1/members/editors/" . $stagename . "/getEditorByStageName";
+			$url = $this->api_root_url . "/api/v1/members/editors/" . $stagename . "/getEditorByStageName";
 			$options = array(
 				CURLOPT_RETURNTRANSFER => true,     // return web page
 				CURLOPT_HEADER         => false,    // don't return headers
@@ -76,14 +74,14 @@ class Home extends CI_Controller {
 					if (isset($editor->logoSquare)) {
 						$this->og_image = "https:" . $editor->logoSquare->url;
 					}
-					$redirect_url = self::API_ROOT_URL . "/editors/" . $stagename . "/" . $currency_slug;					
+					$redirect_url = $this->api_root_url . "/editors/" . $stagename . "/" . $currency_slug;					
 				} else {
 					$redirect_url = null;                
 				}
 			}
 		}
 		if ($redirect_url && $ad_type) {
-			$url = self::API_ROOT_URL . "/api/v1/members/account/editorads/" . $currency_slug . "/" . $stagename . "/" . $ad_type . "/getByStagenameAndType";
+			$url = $this->api_root_url . "/api/v1/members/account/editorads/" . $currency_slug . "/" . $stagename . "/" . $ad_type . "/getByStagenameAndType";
 			$options = array(
 				CURLOPT_RETURNTRANSFER => true,     // return web page
 				CURLOPT_HEADER         => false,    // don't return headers
@@ -119,7 +117,7 @@ class Home extends CI_Controller {
 					if (isset($editorAd->adMainImageFullUrl)) {
 						// $this->og_image = $editorAd->adMainImageFullUrl; //Disable showing an ad image until we have good ones
 					}					
-					$redirect_url = self::API_ROOT_URL . "/tracks/ads/" . $editorAd->_id;      					
+					$redirect_url = $this->api_root_url . "/tracks/ads/" . $editorAd->_id;      					
 				} else {
 					$redirect_url = null;
 				}

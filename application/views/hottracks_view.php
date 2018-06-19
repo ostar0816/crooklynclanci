@@ -40,256 +40,76 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="text-block-11">(Updated Every Hour)</div><img src="images/avnicehead.png" width="100" srcset="images/avnicehead-p-500.png 500w, images/avnicehead.png 1024w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 98vw, (max-width: 991px) 718px, 930px" class="av">
         <div class="avcontent">
           <div class="text-block-6">CURRENT TOP 10 THIS MONTH</div>
-          <div class="topslottrack">
-            <div class="text-block-9">#1</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/c6dcedbe709f889dc882e8adfcf429b9.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack">
-            <div class="text-block-9">#2</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/c6dcedbe709f889dc882e8adfcf429b9.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack">
-            <div class="text-block-9">#3</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/c6dcedbe709f889dc882e8adfcf429b9.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack">
-            <div class="text-block-9">#4</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/c6dcedbe709f889dc882e8adfcf429b9.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack">
-            <div class="text-block-9">#5</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/c6dcedbe709f889dc882e8adfcf429b9.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack">
-            <div class="text-block-9">#6</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/c6dcedbe709f889dc882e8adfcf429b9.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack">
-            <div class="text-block-9">#7</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/c6dcedbe709f889dc882e8adfcf429b9.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack">
-            <div class="text-block-9">#8</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/c6dcedbe709f889dc882e8adfcf429b9.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack">
-            <div class="text-block-9">#9</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/c6dcedbe709f889dc882e8adfcf429b9.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack">
-            <div class="text-block-9">#10</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/c6dcedbe709f889dc882e8adfcf429b9.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
+            <?php
+              for ($i=0; $i<count($tracks[0]); $i++) {
+                $track = $tracks[0][$i]
+            ?>
+              <div class="topslottrack">
+                <div class="text-block-9">#<?php echo $i+1; ?></div>
+                <div class="div-block-5">
+                  <div class="w-embed"><img src="<?php echo $track->editor->logoSquare->url; ?>"></div>
+                </div>
+                <div class="text-block-10-copy"><?php echo $track->artistPrimaryName; ?>
+                  <br>
+                  <?php if (isset($track->artistsFeaturedDisplayName) && strlen($track->artistsFeaturedDisplayName) > 0) { ?>
+                  <span class="text-span-3">(<?php echo $track->artistsFeaturedDisplayName; ?>)</span>
+                  <?php } ?>
+                </div>
+                <div class="text-block-10"><?php echo $track->name; ?><br><span class="text-span-3">(<?php echo $track->version; ?>)</span></div>
+              </div>
+            <?php 
+              }
+            ?>
         </div>
       </div>
       <div class="cols"><img src="images/vvheaddtry.png" width="100" srcset="images/vvheaddtry-p-500.png 500w, images/vvheaddtry.png 1024w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 98vw, (max-width: 991px) 718px, 930px" class="vv">
         <div class="avcontent">
           <div class="text-block-6 v">CURRENT TOP 10 THIS MONTH</div>
-          <div class="topslottrack v">
-            <div class="text-block-9 v">#1</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/2e29f50e1a6baf15dfd9e8c572ebcc8b.png"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack v">
-            <div class="text-block-9 v">#2</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/2e29f50e1a6baf15dfd9e8c572ebcc8b.png"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack v">
-            <div class="text-block-9 v">#3</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/2e29f50e1a6baf15dfd9e8c572ebcc8b.png"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack v">
-            <div class="text-block-9 v">#4</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/2e29f50e1a6baf15dfd9e8c572ebcc8b.png"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack v">
-            <div class="text-block-9 v">#5</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/2e29f50e1a6baf15dfd9e8c572ebcc8b.png"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack v">
-            <div class="text-block-9 v">#6</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/2e29f50e1a6baf15dfd9e8c572ebcc8b.png"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack v">
-            <div class="text-block-9 v">#7</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/2e29f50e1a6baf15dfd9e8c572ebcc8b.png"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack v">
-            <div class="text-block-9 v">#8</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/2e29f50e1a6baf15dfd9e8c572ebcc8b.png"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack v">
-            <div class="text-block-9 v">#9</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/2e29f50e1a6baf15dfd9e8c572ebcc8b.png"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack v">
-            <div class="text-block-9 v">#10</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/2e29f50e1a6baf15dfd9e8c572ebcc8b.png"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
+            <?php
+              for ($i=0; $i<count($tracks[1]); $i++) {
+                $track = $tracks[1][$i]
+            ?>
+              <div class="topslottrack v">
+                <div class="text-block-9 v">#<?php echo $i+1; ?></div>
+                <div class="div-block-5">
+                  <div class="w-embed"><img src="<?php echo $track->editor->logoSquare->url; ?>"></div>
+                </div>
+                <div class="text-block-10-copy"><?php echo $track->artistPrimaryName; ?>
+                  <br>
+                  <?php if (isset($track->artistsFeaturedDisplayName) && strlen($track->artistsFeaturedDisplayName) > 0) { ?>
+                  <span class="text-span-3">(<?php echo $track->artistsFeaturedDisplayName; ?>)</span>
+                  <?php } ?>
+                </div>
+                <div class="text-block-10"><?php echo $track->name; ?><br><span class="text-span-3">(<?php echo $track->version; ?>)</span></div>
+              </div>
+            <?php 
+              }
+            ?>
         </div>
       </div>
       <div class="cols"><img src="images/i12pooltry.png" width="100" srcset="images/i12pooltry-p-800.png 800w, images/i12pooltry.png 1024w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 98vw, (max-width: 991px) 718px, 930px" class="_12">
         <div class="avcontent">
           <div class="text-block-6 io">CURRENT TOP 10 THIS MONTH</div>
-          <div class="topslottrack i">
-            <div class="text-block-9 i">#1</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/97529d2116783104707e6ac86d5fe4d1.jpg"></div>
+          <?php
+            for ($i=0; $i<count($tracks[2]); $i++) {
+              $track = $tracks[2][$i]
+          ?>
+            <div class="topslottrack i">
+              <div class="text-block-9 i">#<?php echo $i+1; ?></div>
+              <div class="div-block-5">
+                <div class="w-embed"><img src="<?php echo $track->editor->logoSquare->url; ?>"></div>
+              </div>
+              <div class="text-block-10-copy"><?php echo $track->artistPrimaryName; ?>
+                <br>
+                <?php if (isset($track->artistsFeaturedDisplayName) && strlen($track->artistsFeaturedDisplayName) > 0) { ?>
+                <span class="text-span-3">(<?php echo $track->artistsFeaturedDisplayName; ?>)</span>
+                <?php } ?>
+              </div>
+              <div class="text-block-10"><?php echo $track->name; ?><br><span class="text-span-3">(<?php echo $track->version; ?>)</span></div>
             </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack i">
-            <div class="text-block-9 i">#2</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/97529d2116783104707e6ac86d5fe4d1.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack i">
-            <div class="text-block-9 i">#3</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/97529d2116783104707e6ac86d5fe4d1.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack i">
-            <div class="text-block-9 i">#4</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/97529d2116783104707e6ac86d5fe4d1.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack i">
-            <div class="text-block-9 i">#5</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/97529d2116783104707e6ac86d5fe4d1.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack i">
-            <div class="text-block-9 i">#6</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/97529d2116783104707e6ac86d5fe4d1.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack i">
-            <div class="text-block-9 i">#7</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/97529d2116783104707e6ac86d5fe4d1.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack i">
-            <div class="text-block-9 i">#8</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/97529d2116783104707e6ac86d5fe4d1.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack i">
-            <div class="text-block-9 i">#9</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/97529d2116783104707e6ac86d5fe4d1.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
-          <div class="topslottrack i">
-            <div class="text-block-9 i">#10</div>
-            <div class="div-block-5">
-              <div class="w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/97529d2116783104707e6ac86d5fe4d1.jpg"></div>
-            </div>
-            <div class="text-block-10-copy">Artist Name<br><span class="text-span-3">(Feat. Artist Name)</span></div>
-            <div class="text-block-10">Track Name<br><span class="text-span-3">(Track Version)</span></div>
-          </div>
+          <?php 
+            }
+          ?>
         </div>
       </div>
     </div>
