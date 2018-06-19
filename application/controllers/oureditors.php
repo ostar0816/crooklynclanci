@@ -18,13 +18,51 @@ class Oureditors extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	var $api_root_url = "";
+
 	function __construct() {
 		parent::__construct();	
 		
+		$this->api_root_url = config_item('api_root_url');
+	}
+
+	function getTopEditors() {
+		$url = $this->api_root_url . "/api/v1/members/editors/getTopEditors";
+		$options = array(
+			CURLOPT_RETURNTRANSFER => true,     // return web page
+			CURLOPT_HEADER         => false,    // don't return headers
+			CURLOPT_FOLLOWLOCATION => true,     // follow redirects
+			CURLOPT_ENCODING       => "",       // handle all encodings
+			CURLOPT_USERAGENT      => "spider", // who am i
+			CURLOPT_AUTOREFERER    => true,     // set referer on redirect
+			CURLOPT_CONNECTTIMEOUT => 120,      // timeout on connect
+			CURLOPT_TIMEOUT        => 120,      // timeout on response
+			CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
+			CURLOPT_SSL_VERIFYPEER => false     // Disabled SSL Cert checks
+		);
+	
+		$ch      = curl_init( $url );
+		curl_setopt_array( $ch, $options );
+		$response = curl_exec( $ch );
+		$err     = curl_errno( $ch );
+		$errmsg  = curl_error( $ch );
+		$header  = curl_getinfo( $ch );
+		curl_close( $ch );
+		//  echo "<br>response = " . $response;
+		if (!$err && json_decode($response) != "not found") {
+			if (isset(json_decode($response)->Editors)) {
+				$editors = json_decode($response)->Editors;
+				return $editors;
+			}
+		}
+		return [];
 	}
 
 	public function index()
 	{
-		$this->load->view('oureditors_view');
+		$editors = $this->getTopEditors();
+		$data['editors'] = $editors;
+		$this->load->view('oureditors_view', $data);
 	}
 }

@@ -1146,7 +1146,9 @@ p {
 .editor.i {
   background-color: rgba(39, 108, 24, .7);
 }
-
+.w-embed .editor-logo {
+  height: 100%;
+}
 .nb {
   display: -webkit-box;
   display: -webkit-flex;

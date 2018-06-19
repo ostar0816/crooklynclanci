@@ -41,13 +41,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="avcontent">
           <div class="text-block-6">CURRENT TOP 10 THIS MONTH</div>
             <?php
-              for ($i=0; $i<count($tracks[0]); $i++) {
-                $track = $tracks[0][$i]
+              if (isset($tracks) && count($tracks)>=3) {
+                for ($i=0; $i<count($tracks[0]); $i++) {
+                  $track = $tracks[0][$i]
             ?>
               <div class="topslottrack">
                 <div class="text-block-9">#<?php echo $i+1; ?></div>
                 <div class="div-block-5">
-                  <div class="w-embed"><img src="<?php echo $track->editor->logoSquare->url; ?>"></div>
+                  <div class="w-embed"><img class="editor-logo" src="<?php echo $track->editor->logoSquare->url; ?>"></div>
                 </div>
                 <div class="text-block-10-copy"><?php echo $track->artistPrimaryName; ?>
                   <br>
@@ -58,6 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="text-block-10"><?php echo $track->name; ?><br><span class="text-span-3">(<?php echo $track->version; ?>)</span></div>
               </div>
             <?php 
+                }
               }
             ?>
         </div>
@@ -66,13 +68,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="avcontent">
           <div class="text-block-6 v">CURRENT TOP 10 THIS MONTH</div>
             <?php
-              for ($i=0; $i<count($tracks[1]); $i++) {
-                $track = $tracks[1][$i]
+              if (isset($tracks) && count($tracks)>=3) {
+                for ($i=0; $i<count($tracks[1]); $i++) {
+                  $track = $tracks[1][$i]
             ?>
               <div class="topslottrack v">
                 <div class="text-block-9 v">#<?php echo $i+1; ?></div>
                 <div class="div-block-5">
-                  <div class="w-embed"><img src="<?php echo $track->editor->logoSquare->url; ?>"></div>
+                  <div class="w-embed"><img class="editor-logo" src="<?php echo $track->editor->logoSquare->url; ?>"></div>
                 </div>
                 <div class="text-block-10-copy"><?php echo $track->artistPrimaryName; ?>
                   <br>
@@ -83,6 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="text-block-10"><?php echo $track->name; ?><br><span class="text-span-3">(<?php echo $track->version; ?>)</span></div>
               </div>
             <?php 
+                }
               }
             ?>
         </div>
@@ -91,13 +95,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="avcontent">
           <div class="text-block-6 io">CURRENT TOP 10 THIS MONTH</div>
           <?php
-            for ($i=0; $i<count($tracks[2]); $i++) {
-              $track = $tracks[2][$i]
+              if (isset($tracks) && count($tracks) >= 3) {
+                for ($i=0; $i<count($tracks[2]); $i++) {
+                  $track = $tracks[2][$i]
           ?>
             <div class="topslottrack i">
               <div class="text-block-9 i">#<?php echo $i+1; ?></div>
               <div class="div-block-5">
-                <div class="w-embed"><img src="<?php echo $track->editor->logoSquare->url; ?>"></div>
+                <div class="w-embed"><img class="editor-logo" src="<?php echo $track->editor->logoSquare->url; ?>"></div>
               </div>
               <div class="text-block-10-copy"><?php echo $track->artistPrimaryName; ?>
                 <br>
@@ -108,6 +113,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="text-block-10"><?php echo $track->name; ?><br><span class="text-span-3">(<?php echo $track->version; ?>)</span></div>
             </div>
           <?php 
+              }
             }
           ?>
         </div>

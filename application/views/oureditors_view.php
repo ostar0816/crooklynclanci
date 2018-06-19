@@ -39,162 +39,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="editorhold">
       <div class="dbee"><img src="images/avnicehead.png" srcset="images/avnicehead-p-500.png 500w, images/avnicehead.png 1024w" sizes="(max-width: 767px) 98vw, (max-width: 991px) 718px, 930px">
         <div class="text-block-6">CURRENT TOP 10 THIS MONTH</div>
-        <div class="editor">
-          <div class="nb">#1</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/c6dcedbe709f889dc882e8adfcf429b9.jpg"></div>
-          <div class="editorname">Starjack</div>
-        </div>
-        <div class="editor">
-          <div class="nb">#2</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/2c8e63ccb144a75eeb59b63acec09845.png"></div>
-          <div class="editorname">The Goodfellas</div>
-        </div>
-        <div class="editor">
-          <div class="nb">#3</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/db5c7c5524cf497ae943557bed195878.jpg"></div>
-          <div class="editorname">Collini</div>
-        </div>
-        <div class="editor">
-          <div class="nb">#4</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/5d8f8f8840cb2ddae817fa92b470ef37.png"></div>
-          <div class="editorname">Mario Santiago</div>
-        </div>
-        <div class="editor">
-          <div class="nb">#5</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/86352ce0e8a1edf9317b565b20d349dc.png"></div>
-          <div class="editorname">Kastra</div>
-        </div>
-        <div class="editor">
-          <div class="nb">#6</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/ffb45a3233e2b1312d3b6c7c408b019a.jpg"></div>
-          <div class="editorname">Claudio D</div>
-        </div>
-        <div class="editor">
-          <div class="nb">#7</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/f02cbb66499d9dc1ce0aaaa00c957f48.png"></div>
-          <div class="editorname">Rich Rubillar</div>
-        </div>
-        <div class="editor">
-          <div class="nb">#8</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/a96ab3fb6f3093120f03512e6587db4d.jpg"></div>
-          <div class="editorname">DJ Sequel</div>
-        </div>
-        <div class="editor">
-          <div class="nb">#9</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/57947b992f76a285afb6f3cbca239e6d.jpg"></div>
-          <div class="editorname">DJ Muka</div>
-        </div>
-        <div class="editor">
-          <div class="nb">#10</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/b52158c004ee6332dd3340056dfd309a.png"></div>
-          <div class="editorname">Nikolas Degas</div>
-        </div>
+        <?php
+          if (isset($editors) && count($editors) >= 3) {
+            for ($i=0; $i<count($editors[0]); $i++) {
+              $editor = $editors[0][$i];
+        ?>
+          <div class="editor">
+            <div class="nb">#<?php echo $i+1; ?></div>
+            <div class="html-embed w-embed"><img class="editor-logo" src="<?php echo $editor->logoSquare->url; ?>"></div>
+            <div class="editorname"><?php echo $editor->stageName; ?></div>
+          </div>
+        <?php 
+            }
+          }
+        ?>
       </div>
       <div class="dbee"><img src="images/vvheaddtry.png" srcset="images/vvheaddtry-p-500.png 500w, images/vvheaddtry.png 1024w" sizes="(max-width: 767px) 98vw, (max-width: 991px) 718px, 930px">
         <div class="text-block-6 v">CURRENT TOP 10 THIS MONTH</div>
-        <div class="editor v">
-          <div class="nb vvv">#1</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/c6dcedbe709f889dc882e8adfcf429b9.jpg"></div>
-          <div class="editorname vvv">Starjack</div>
-        </div>
-        <div class="editor v">
-          <div class="nb vvv">#2</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/2c8e63ccb144a75eeb59b63acec09845.png"></div>
-          <div class="editorname vvv">The Goodfellas</div>
-        </div>
-        <div class="editor v">
-          <div class="nb vvv">#3</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/db5c7c5524cf497ae943557bed195878.jpg"></div>
-          <div class="editorname vvv">Collini</div>
-        </div>
-        <div class="editor v">
-          <div class="nb vvv">#4</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/5d8f8f8840cb2ddae817fa92b470ef37.png"></div>
-          <div class="editorname vvv">Mario Santiago</div>
-        </div>
-        <div class="editor v">
-          <div class="nb vvv">#5</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/86352ce0e8a1edf9317b565b20d349dc.png"></div>
-          <div class="editorname vvv">Kastra</div>
-        </div>
-        <div class="editor v">
-          <div class="nb vvv">#6</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/ffb45a3233e2b1312d3b6c7c408b019a.jpg"></div>
-          <div class="editorname vvv">Claudio D</div>
-        </div>
-        <div class="editor v">
-          <div class="nb vvv">#7</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/f02cbb66499d9dc1ce0aaaa00c957f48.png"></div>
-          <div class="editorname vvv">Rich Rubillar</div>
-        </div>
-        <div class="editor v">
-          <div class="nb vvv">#8</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/a96ab3fb6f3093120f03512e6587db4d.jpg"></div>
-          <div class="editorname vvv">DJ Sequel</div>
-        </div>
-        <div class="editor v">
-          <div class="nb vvv">#9</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/57947b992f76a285afb6f3cbca239e6d.jpg"></div>
-          <div class="editorname vvv">DJ Muka</div>
-        </div>
-        <div class="editor v">
-          <div class="nb vvv">#10</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/b52158c004ee6332dd3340056dfd309a.png"></div>
-          <div class="editorname vvv">Nikolas Degas</div>
-        </div>
+          <?php
+            if (isset($editors) && count($editors) >= 3) {
+              for ($i=0; $i<count($editors[1]); $i++) {
+                $editor = $editors[1][$i];
+          ?>
+            <div class="editor v">
+              <div class="nb vvv">#<?php echo $i+1; ?></div>
+              <div class="html-embed w-embed"><img class="editor-logo" src="<?php echo $editor->logoSquare->url; ?>"></div>
+              <div class="editorname vvv"><?php echo $editor->stageName; ?></div>
+            </div>
+          <?php 
+              }
+            }
+          ?>
       </div>
       <div class="dbee"><img src="images/i12pooltry.png" srcset="images/i12pooltry-p-800.png 800w, images/i12pooltry.png 1024w" sizes="(max-width: 767px) 98vw, (max-width: 991px) 718px, 930px">
         <div class="text-block-6 io">CURRENT TOP 10 THIS MONTH</div>
-        <div class="editor i">
-          <div class="nb i">#1</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/c6dcedbe709f889dc882e8adfcf429b9.jpg"></div>
-          <div class="editorname i">Starjack</div>
-        </div>
-        <div class="editor i">
-          <div class="nb i">#2</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/2c8e63ccb144a75eeb59b63acec09845.png"></div>
-          <div class="editorname i">The Goodfellas</div>
-        </div>
-        <div class="editor i">
-          <div class="nb i">#3</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/db5c7c5524cf497ae943557bed195878.jpg"></div>
-          <div class="editorname i">Collini</div>
-        </div>
-        <div class="editor i">
-          <div class="nb i">#4</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/5d8f8f8840cb2ddae817fa92b470ef37.png"></div>
-          <div class="editorname i">Mario Santiago</div>
-        </div>
-        <div class="editor i">
-          <div class="nb i">#5</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/86352ce0e8a1edf9317b565b20d349dc.png"></div>
-          <div class="editorname i">Kastra</div>
-        </div>
-        <div class="editor i">
-          <div class="nb i">#6</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/ffb45a3233e2b1312d3b6c7c408b019a.jpg"></div>
-          <div class="editorname i">Claudio D</div>
-        </div>
-        <div class="editor i">
-          <div class="nb i">#7</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/f02cbb66499d9dc1ce0aaaa00c957f48.png"></div>
-          <div class="editorname i">Rich Rubillar</div>
-        </div>
-        <div class="editor i">
-          <div class="nb i">#8</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/a96ab3fb6f3093120f03512e6587db4d.jpg"></div>
-          <div class="editorname i">DJ Sequel</div>
-        </div>
-        <div class="editor i">
-          <div class="nb i">#9</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/57947b992f76a285afb6f3cbca239e6d.jpg"></div>
-          <div class="editorname i">DJ Muka</div>
-        </div>
-        <div class="editor i">
-          <div class="nb i">#10</div>
-          <div class="html-embed w-embed"><img src="https://crooklynclanv2prod.s3.amazonaws.com/images/b52158c004ee6332dd3340056dfd309a.png"></div>
-          <div class="editorname i">Nikolas Degas</div>
-        </div>
+          <?php
+            if (isset($editors) && count($editors) >= 3) {
+              for ($i=0; $i<count($editors[1]); $i++) {
+                  $editor = $editors[1][$i];
+          ?>
+              <div class="editor i">
+                <div class="nb i">#<?php echo $i+1; ?></div>
+                <div class="html-embed w-embed"><img class="editor-logo" src="<?php echo $editor->logoSquare->url; ?>"></div>
+                <div class="editorname i"><?php echo $editor->stageName; ?></div>
+              </div>
+            <?php 
+                }
+              }
+            ?>
       </div>
     </div>
   </div>
