@@ -28,7 +28,7 @@ class Hottracks extends CI_Controller {
 	}
 
 	function getTopTracks() {
-		$url = $this->api_root_url . "/api/v1/members/track/getTopTracks";
+		$url = $this->api_root_url . "api/v1/members/track/getTopTracks";
 		$options = array(
 			CURLOPT_RETURNTRANSFER => true,     // return web page
 			CURLOPT_HEADER         => false,    // don't return headers

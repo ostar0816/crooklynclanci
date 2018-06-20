@@ -28,7 +28,7 @@ class Oureditors extends CI_Controller {
 	}
 
 	function getTopEditors() {
-		$url = $this->api_root_url . "/api/v1/members/editors/getTopEditors";
+		$url = $this->api_root_url . "api/v1/members/editors/getTopEditors";
 		$options = array(
 			CURLOPT_RETURNTRANSFER => true,     // return web page
 			CURLOPT_HEADER         => false,    // don't return headers

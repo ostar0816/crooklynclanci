@@ -1137,16 +1137,30 @@ p {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   background-color: rgba(117, 40, 41, .7);
+  cursor: pointer;
+}
+
+.editor:hover {
+  background-color: #752829;
 }
 
 .editor.v {
+  background-color: rgba(141, 112, 34, .7);
+}
+
+.editor.v:hover {
   background-color: #8d7022;
 }
 
 .editor.i {
   background-color: rgba(39, 108, 24, .7);
 }
-.w-embed .editor-logo {
+
+.editor.i:hover {
+  background-color: #276c18;
+}
+
+.editor .editor-logo {
   height: 100%;
 }
 .nb {
@@ -1308,6 +1322,7 @@ p {
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .topslottrack:hover {

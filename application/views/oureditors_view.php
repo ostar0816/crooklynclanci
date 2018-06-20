@@ -40,11 +40,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="dbee"><img src="images/avnicehead.png" srcset="images/avnicehead-p-500.png 500w, images/avnicehead.png 1024w" sizes="(max-width: 767px) 98vw, (max-width: 991px) 718px, 930px">
         <div class="text-block-6">CURRENT TOP 10 THIS MONTH</div>
         <?php
-          if (isset($editors) && count($editors) >= 3) {
-            for ($i=0; $i<count($editors[0]); $i++) {
-              $editor = $editors[0][$i];
+          $currency_slug_list = ['audio-vault', 'video-vault', 'i12inch-digital-pool'];
+          $currency_index = 0;
+          if (isset($editors) && count($editors) >= 1) {
+            for ($i=0; $i<count($editors[$currency_index]); $i++) {
+              $editor = $editors[$currency_index][$i];
         ?>
-          <div class="editor">
+          <div class="editor" onclick="onClickEditor('<?php echo config_item('front_url'); ?>', '<?php echo $editor->stageName; ?>', '<?php echo $currency_slug_list[$currency_index]; ?>');">
             <div class="nb">#<?php echo $i+1; ?></div>
             <div class="html-embed w-embed"><img class="editor-logo" src="<?php echo $editor->logoSquare->url; ?>"></div>
             <div class="editorname"><?php echo $editor->stageName; ?></div>
@@ -57,11 +59,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="dbee"><img src="images/vvheaddtry.png" srcset="images/vvheaddtry-p-500.png 500w, images/vvheaddtry.png 1024w" sizes="(max-width: 767px) 98vw, (max-width: 991px) 718px, 930px">
         <div class="text-block-6 v">CURRENT TOP 10 THIS MONTH</div>
           <?php
-            if (isset($editors) && count($editors) >= 3) {
-              for ($i=0; $i<count($editors[1]); $i++) {
-                $editor = $editors[1][$i];
+            $currency_index = 1;
+            if (isset($editors) && count($editors) >= 2) {
+              for ($i=0; $i<count($editors[$currency_index]); $i++) {
+                $editor = $editors[$currency_index][$i];
           ?>
-            <div class="editor v">
+            <div class="editor v" onclick="onClickEditor('<?php echo config_item('front_url'); ?>', '<?php echo $editor->stageName; ?>', '<?php echo $currency_slug_list[$currency_index]; ?>');">
               <div class="nb vvv">#<?php echo $i+1; ?></div>
               <div class="html-embed w-embed"><img class="editor-logo" src="<?php echo $editor->logoSquare->url; ?>"></div>
               <div class="editorname vvv"><?php echo $editor->stageName; ?></div>
@@ -74,11 +77,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="dbee"><img src="images/i12pooltry.png" srcset="images/i12pooltry-p-800.png 800w, images/i12pooltry.png 1024w" sizes="(max-width: 767px) 98vw, (max-width: 991px) 718px, 930px">
         <div class="text-block-6 io">CURRENT TOP 10 THIS MONTH</div>
           <?php
+            $currency_index = 2;
             if (isset($editors) && count($editors) >= 3) {
-              for ($i=0; $i<count($editors[1]); $i++) {
-                  $editor = $editors[1][$i];
+              for ($i=0; $i<count($editors[$currency_index]); $i++) {
+                  $editor = $editors[$currency_index][$i];
           ?>
-              <div class="editor i">
+              <div class="editor i" onclick="onClickEditor('<?php echo config_item('front_url'); ?>', '<?php echo $editor->stageName; ?>', '<?php echo $currency_slug_list[$currency_index]; ?>');">
                 <div class="nb i">#<?php echo $i+1; ?></div>
                 <div class="html-embed w-embed"><img class="editor-logo" src="<?php echo $editor->logoSquare->url; ?>"></div>
                 <div class="editorname i"><?php echo $editor->stageName; ?></div>
@@ -108,6 +112,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="js/crooklyn_event.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
