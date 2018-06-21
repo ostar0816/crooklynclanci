@@ -41,11 +41,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="avcontent">
           <div class="text-block-6">CURRENT TOP 10 THIS MONTH</div>
             <?php
-              if (isset($tracks) && count($tracks)>=3) {
-                for ($i=0; $i<count($tracks[0]); $i++) {
-                  $track = $tracks[0][$i]
+              $currency_index = 0;
+              if (isset($tracks) && count($tracks)>=1) {
+                for ($i=0; $i<count($tracks[$currency_index]); $i++) {
+                  $track = $tracks[$currency_index][$i];
             ?>
-              <div class="topslottrack">
+              <div class="topslottrack" onclick="onClickTrack('<?php echo config_item('front_url'); ?>', '<?php echo $track->_id; ?>');">
                 <div class="text-block-9">#<?php echo $i+1; ?></div>
                 <div class="div-block-5">
                   <div class="w-embed"><img class="editor-logo" src="<?php echo $track->editor->logoSquare->url; ?>"></div>
@@ -68,11 +69,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="avcontent">
           <div class="text-block-6 v">CURRENT TOP 10 THIS MONTH</div>
             <?php
-              if (isset($tracks) && count($tracks)>=3) {
-                for ($i=0; $i<count($tracks[1]); $i++) {
-                  $track = $tracks[1][$i]
+              $currency_index = 1;
+              if (isset($tracks) && count($tracks)>=2) {
+                for ($i=0; $i<count($tracks[$currency_index]); $i++) {
+                  $track = $tracks[$currency_index][$i];
             ?>
-              <div class="topslottrack v">
+              <div class="topslottrack v" onclick="onClickTrack('<?php echo config_item('front_url'); ?>', '<?php echo $track->_id; ?>');">
                 <div class="text-block-9 v">#<?php echo $i+1; ?></div>
                 <div class="div-block-5">
                   <div class="w-embed"><img class="editor-logo" src="<?php echo $track->editor->logoSquare->url; ?>"></div>
@@ -95,11 +97,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="avcontent">
           <div class="text-block-6 io">CURRENT TOP 10 THIS MONTH</div>
           <?php
+              $currency_index = 2;
               if (isset($tracks) && count($tracks) >= 3) {
-                for ($i=0; $i<count($tracks[2]); $i++) {
-                  $track = $tracks[2][$i]
+                for ($i=0; $i<count($tracks[$currency_index]); $i++) {
+                  $track = $tracks[$currency_index][$i];
           ?>
-            <div class="topslottrack i">
+            <div class="topslottrack i" onclick="onClickTrack('<?php echo config_item('front_url'); ?>', '<?php echo $track->_id; ?>');">
               <div class="text-block-9 i">#<?php echo $i+1; ?></div>
               <div class="div-block-5">
                 <div class="w-embed"><img class="editor-logo" src="<?php echo $track->editor->logoSquare->url; ?>"></div>
@@ -138,6 +141,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="js/crooklyn_event.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

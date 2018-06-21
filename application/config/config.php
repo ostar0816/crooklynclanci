@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 // $config['base_url'] = 'https://www.crooklynclan.net/'; //Empty this in localhost
 $config['base_url'] = ''; //Empty this in localhost
-$config['front_url'] = 'https://crooklyn-clan-staging.herokuapp.com/';
+$config['front_url'] = 'http://192.168.0.85/';
 
 // $config['api_root_url'] = "https://v2-beta.crooklynclan.net/"; //Product
 // $config['api_root_url'] = "https://crooklyn-clan-staging.herokuapp.com/"; //Staging
