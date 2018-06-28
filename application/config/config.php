@@ -23,12 +23,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-// $config['base_url'] = 'https://www.crooklynclan.net/'; //Empty this in localhost
-$config['base_url'] = 'https://ostar.000webhostapp.com/crooklynci/'; //Empty this in localhost
-$config['front_url'] = 'https://crooklyn-clan-staging.herokuapp.com/';
+$config['base_url'] = 'https://www.crooklynclan.net/'; //Empty this in localhost
+// $config['base_url'] = 'https://ostar.000webhostapp.com/crooklynci/'; //Empty this in localhost
+$config['front_url'] = 'https://v2-beta.crooklynclan.net/';
 
-// $config['api_root_url'] = "https://v2-beta.crooklynclan.net/"; //Product
-$config['api_root_url'] = "https://crooklyn-clan-staging.herokuapp.com/"; //Staging
+$config['api_root_url'] = "https://v2-beta.crooklynclan.net/"; //Product
+// $config['api_root_url'] = "https://crooklyn-clan-staging.herokuapp.com/"; //Staging
 // $config['api_root_url'] = "http://192.168.0.85/"; //Localhost
 /*
 |--------------------------------------------------------------------------
