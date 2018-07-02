@@ -62,8 +62,15 @@ $route['hottracks'] = 'hottracks';
 $route['oureditors'] = 'oureditors';
 $route['contact'] = 'contact';
 
-$route['(:any)/(:any)/(:any)'] = 'home/index/$1/$2/$3';
-$route['(:any)/(:any)'] = 'home/index/$1/$2';
+// define the root mappings explicitely to avoid spamming
+$route['audio-vault/(:any)/(:any)'] = 'home/index/audio-vault/$1/$2';
+$route['video-vault/(:any)/(:any)'] = 'home/index/video-vault/$1/$2';
+$route['i12inch-digital-pool/(:any)/(:any)'] = 'home/index/i12inch-digital-pool/$1/$2';
+
+$route['audio-vault/(:any)'] = 'home/index/audio-vault/$1';
+$route['video-vault/(:any)'] = 'home/index/video-vault/$1';
+$route['i12inch-digital-pool/(:any)'] = 'home/index/i12inch-digital-pool/$1';
+
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

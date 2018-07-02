@@ -51,5 +51,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <?php
+    if ($redirect_url) {
+        echo "<script type='text/javascript'>document.location.href='{$redirect_url}';</script>";  //Redirect to the vault store
+    } 
+  ?>
 </body>
 </html>
