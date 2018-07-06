@@ -546,6 +546,7 @@ p {
 .button.contact {
   padding-right: 29px;
   padding-left: 29px;
+  color: black;
   background-color: rgba(248, 199, 41, .7);
 }
 

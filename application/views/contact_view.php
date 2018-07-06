@@ -37,12 +37,12 @@
       <div class="contact-row">
         <h2 class="contact-h3">Tell us who you are and what we can do for you.</h2>
         <div class="form w-form">
-          <form id="email-form" name="email-form" data-name="Email Form"><label for="name" class="field">Name:</label><input type="text" id="name" name="name" data-name="Name" placeholder="Enter your name" maxlength="256" class="input w-input"><label for="email" class="field"><span>*</span> Email Address:</label><input type="email" class="input w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email address" id="email" required=""><label for="Subject" class="field">Subject:</label><input type="email" class="input w-input" maxlength="256" name="Subject" data-name="Subject" placeholder="Enter your subject" id="Subject" required=""><label for="field" class="field">Message:</label><textarea id="field" name="field" placeholder="Enter your message" maxlength="5000" class="input textarea w-input"></textarea><input type="submit" value="Send Message" data-wait="Please wait..." class="button contact w-button"></form>
-          <div class="success w-form-done">
-            <p>Thank you! Your submission has been received!</p>
-          </div>
-          <div class="w-form-fail">
-            <p>Oops! Something went wrong while submitting the form</p>
+          <div id="email-form" name="email-form" data-name="Email Form">
+            <label for="name" class="field"><span>*</span>Name:</label><input type="text" id="name" name="name" data-name="Name" placeholder="Enter your name" maxlength="256" class="input w-input">
+            <label for="email" class="field"><span>*</span> Email Address:</label><input type="email" class="input w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email address" id="email" required="">
+            <label for="Subject" class="field"><span>*</span>Subject:</label><input type="text" class="input w-input" maxlength="256" name="subject" data-name="Subject" placeholder="Enter your subject" id="subject" required="">
+            <label for="field" class="field"><span>*</span>Message:</label><textarea id="message" name="message" placeholder="Enter your message" maxlength="5000" class="input textarea w-input"></textarea>
+            <input type="button" value="Send Message" data-wait="Please wait..." class="button contact w-button" onclick="onClickContact('<?php echo config_item('api_root_url'); ?>')">
           </div>
         </div>
       </div>
@@ -66,6 +66,7 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="<?php echo base_url(); ?>js/webflow.js" type="text/javascript"></script>
+  <script src="<?php echo base_url(); ?>js/crooklyn_event.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
