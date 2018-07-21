@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+require_once('EditorAd.php');
+
 class Aboutus extends CI_Controller {
 
 	/**
@@ -18,13 +20,18 @@ class Aboutus extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	var $api_root_url = "";
 	function __construct() {
 		parent::__construct();	
 		
+		$this->api_root_url = config_item('api_root_url');
 	}
 
 	public function index()
 	{
-		$this->load->view('aboutus_view');
+		$editorAds = getEditorAds($this->api_root_url);
+		$data['editorAds'] = $editorAds;
+		// var_dump($editorAds);
+		$this->load->view('aboutus_view', $data);
 	}
 }

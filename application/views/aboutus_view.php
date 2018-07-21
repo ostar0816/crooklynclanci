@@ -13,6 +13,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link href="<?php echo base_url(); ?>css/normalize.css" rel="stylesheet" type="text/css">
   <link href="<?php echo base_url(); ?>css/webflow.css" rel="stylesheet" type="text/css">
   <link href="<?php echo base_url(); ?>css/eqproj.webflow.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    .mySlides {display:none}
+    .w3-left, .w3-right, .w3-badge {cursor:pointer}
+    .w3-badge {height:13px;width:13px;padding:0}
+  </style>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Changa One:400,400italic","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Roboto:300,regular,500","Roboto Slab:regular"]  }});</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
@@ -31,9 +37,65 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
   </div>
   <div class="content-wrapper w-container">
-    <!-- <div class="div-block-6">
-      <div>OWNER AD SYSTEM GOES HERE</div>
+    <!-- <div class="w3-content w3-display-container slider-container" onmouseenter="setPause(true)" onmouseleave="setPause(false)">
+      <div class="figure">
+        <div class="ad-container">
+          <img src="https://scontent-lga3-1.cdninstagram.com/vp/4c58ef8c159dc4337edef3365be23e04/5BDA4A97/t51.2885-15/e35/37346980_1030812573742493_195249402254721024_n.jpg">
+        </div>
+      </div>
+      <div class="figure">
+        <div class="ad-container">
+          <img src="https://scontent-lga3-1.cdninstagram.com/vp/969b80adae0c51d75a1049eabb419ef9/5BC8D446/t51.2885-15/e35/37243048_1888727164762410_8024235545976635392_n.jpg">
+        </div>
+      </div>
+      <div class="figure">
+        <div class="ad-container">
+          <img src="https://scontent-lga3-1.cdninstagram.com/vp/91cfb4776dd388d02f65be462dbeb851/5C13F1EA/t51.2885-15/e35/37344075_688719014804097_8019793884072640512_n.jpg">
+        </div>
+      </div>
+      <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle indicator-container">
+        <div class="w3-left w3-hover-text-khaki arrow-button" onclick="plusDivs(-1)">&#10094;</div>
+        <div class="w3-right w3-hover-text-khaki arrow-button" onclick="plusDivs(1)">&#10095;</div>
+        <span class="w3-badge page-indicator w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-badge page-indicator w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-badge page-indicator w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+      </div>
     </div> -->
+    <div class="w3-content w3-display-container slider-container" onmouseenter="setPause(true)" onmouseleave="setPause(false)">
+      <?php 
+        for ($i=0; $i<count($editorAds); $i++) { 
+          $ads = $editorAds[$i];
+      ?>
+        <div class="figure">
+          <div class="ad-container">
+            <?php
+              for ($j=0; $j<count($ads); $j++) {
+                $ad = $ads[$j];
+                if ($ad['adType'] == 'Track') {
+            ?>
+                <img src="<?php echo $ad['adMainImageFullUrl']; ?>" onclick="onAdClick('<?php echo $ad['redirectUrl']; ?>');" class="half-height">
+              <?php
+                } else {
+                ?>
+                <img src="<?php echo $ad['adMainImageFullUrl']; ?>" onclick="onAdClick('<?php echo $ad['redirectUrl']; ?>')">
+            <?php
+                }
+              }
+            ?>
+          </div>
+        </div>
+      <?php } ?>
+      <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle indicator-container">
+        <div class="w3-left w3-hover-text-khaki arrow-button" onclick="plusDivs(-1)">&#10094;</div>
+        <div class="w3-right w3-hover-text-khaki arrow-button" onclick="plusDivs(1)">&#10095;</div>
+        <?php 
+          for ($i=1; $i<=count($editorAds); $i++) {
+        ?>
+        <span class="w3-badge page-indicator w3-border w3-transparent w3-hover-white" onclick="currentDiv(<?php echo $i; ?>)"></span>
+        <?php } ?>
+      </div>
+    </div>
+
     <h1 class="page-title">ABOUT US</h1>
     <div class="imgntxt">
       <div class="div-block"><img src="<?php echo base_url(); ?>images/sizriz.jpg" class="img">
@@ -63,7 +125,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="<?php echo base_url(); ?>js/webflow.js" type="text/javascript"></script>
+  <script src="<?php echo base_url(); ?>js/crooklyn_event.js" type="text/javascript"></script>
+  <script src="<?php echo base_url(); ?>js/slider_show.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

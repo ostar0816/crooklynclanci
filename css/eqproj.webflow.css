@@ -1521,6 +1521,67 @@ p {
   background-color: #0098ff;
   color: #fff;
 }
+.slider-container {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.slider-container .figure {
+  height: 100%;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 2s;
+  -moz-transition: opacity 2s;
+  -o-transition: opacity 2s;
+  transition: opacity 2s;
+}
+.slider-container .figure .ad-container {
+  height: 100%;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.slider-container img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%;
+  cursor: pointer;
+  height: 100%;
+}
+.slider-container img.half-height {
+  height: 50%;
+}
+.slider-container .indicator-container {
+  width: 100%;
+  z-index: 3;
+}
+.slider-container .arrow-button {
+  font-size: 30px;
+}
+.slider-container .page-indicator {
+  margin-top: 20px;
+}
 
 .text-block-12 {
   display: -webkit-box;
