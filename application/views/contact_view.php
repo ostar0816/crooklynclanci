@@ -6,6 +6,7 @@
   <title>Contact Us</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="<?php echo base_url(); ?>css/normalize.css" rel="stylesheet" type="text/css">
   <link href="<?php echo base_url(); ?>css/webflow.css" rel="stylesheet" type="text/css">
   <link href="<?php echo base_url(); ?>css/eqproj.webflow.css" rel="stylesheet" type="text/css">
@@ -28,9 +29,40 @@
   </div>
   <div class="section">
     <div class="content-wrapper w-container">
-      <!-- <div class="div-block-6">
-        <div>OWNER AD SYSTEM GOES HERE</div>
-      </div> -->
+      <div class="w3-content w3-display-container slider-container" onmouseenter="setPause(true)" onmouseleave="setPause(false)">
+        <?php 
+          for ($i=0; $i<count($editorAds); $i++) { 
+            $ads = $editorAds[$i];
+        ?>
+          <div class="figure">
+            <div class="ad-container">
+              <?php
+                for ($j=0; $j<count($ads); $j++) {
+                  $ad = $ads[$j];
+                  if ($ad['adType'] == 'Track') {
+              ?>
+                  <img src="<?php echo $ad['adMainImageFullUrl']; ?>" onclick="onAdClick('<?php echo $ad['redirectUrl']; ?>');" class="half-height">
+                <?php
+                  } else {
+                  ?>
+                  <img src="<?php echo $ad['adMainImageFullUrl']; ?>" onclick="onAdClick('<?php echo $ad['redirectUrl']; ?>')">
+              <?php
+                  }
+                }
+              ?>
+            </div>
+          </div>
+        <?php } ?>
+        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle indicator-container">
+          <div class="w3-left w3-hover-text-khaki arrow-button" onclick="plusDivs(-1)">&#10094;</div>
+          <div class="w3-right w3-hover-text-khaki arrow-button" onclick="plusDivs(1)">&#10095;</div>
+          <?php 
+            for ($i=1; $i<=count($editorAds); $i++) {
+          ?>
+          <span class="w3-badge page-indicator w3-border w3-transparent w3-hover-white" onclick="currentDiv(<?php echo $i; ?>)"></span>
+          <?php } ?>
+        </div>
+      </div>
       <h1 class="page-title">Get in touch</h1>
     </div>
     <div class="content w-container">
@@ -67,6 +99,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="<?php echo base_url(); ?>js/webflow.js" type="text/javascript"></script>
   <script src="<?php echo base_url(); ?>js/crooklyn_event.js" type="text/javascript"></script>
+  <script src="<?php echo base_url(); ?>js/slider_show.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

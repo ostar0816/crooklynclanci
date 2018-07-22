@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+require_once('EditorAd.php');
+
 class Contact extends CI_Controller {
 
 	/**
@@ -25,6 +27,10 @@ class Contact extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('contact_view');
+		$api_root_url = config_item('api_root_url');
+		$editorAds = getEditorAds($api_root_url);
+		$data['editorAds'] = $editorAds;
+
+		$this->load->view('contact_view', $data);
 	}
 }

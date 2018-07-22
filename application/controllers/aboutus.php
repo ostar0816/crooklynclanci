@@ -20,16 +20,14 @@ class Aboutus extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	var $api_root_url = "";
 	function __construct() {
 		parent::__construct();	
-		
-		$this->api_root_url = config_item('api_root_url');
 	}
 
 	public function index()
 	{
-		$editorAds = getEditorAds($this->api_root_url);
+		$api_root_url = config_item('api_root_url');
+		$editorAds = getEditorAds($api_root_url);
 		$data['editorAds'] = $editorAds;
 		// var_dump($editorAds);
 		$this->load->view('aboutus_view', $data);

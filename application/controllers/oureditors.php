@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+require_once('EditorAd.php');
+
 class Oureditors extends CI_Controller {
 
 	/**
@@ -61,6 +63,9 @@ class Oureditors extends CI_Controller {
 
 	public function index()
 	{
+		$editorAds = getEditorAds($this->api_root_url);
+		$data['editorAds'] = $editorAds;
+
 		$editors = $this->getTopEditors();
 		$data['editors'] = $editors;
 		$this->load->view('oureditors_view', $data);

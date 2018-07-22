@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+require_once('EditorAd.php');
+
 class Howitworks extends CI_Controller {
 
 	/**
@@ -25,6 +27,9 @@ class Howitworks extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('howitworks_view');
+		$api_root_url = config_item('api_root_url');
+		$editorAds = getEditorAds($api_root_url);
+		$data['editorAds'] = $editorAds;
+		$this->load->view('howitworks_view', $data);
 	}
 }

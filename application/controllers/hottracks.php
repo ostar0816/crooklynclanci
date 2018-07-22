@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+require_once('EditorAd.php');
+
 class Hottracks extends CI_Controller {
 
 	/**
@@ -61,6 +63,9 @@ class Hottracks extends CI_Controller {
 
 	public function index()
 	{
+		$editorAds = getEditorAds($this->api_root_url);
+		$data['editorAds'] = $editorAds;
+
 		$tracks = $this->getTopTracks();
 		$data['tracks'] = $tracks;
 		$this->load->view('hottracks_view', $data);
