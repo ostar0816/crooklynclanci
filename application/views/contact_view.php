@@ -53,16 +53,8 @@
             </div>
           </div>
         <?php } ?>
-        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle indicator-container">
-          <div class="w3-left w3-hover-text-khaki arrow-button" onclick="plusDivs(-1)">&#10094;</div>
-          <div class="w3-right w3-hover-text-khaki arrow-button" onclick="plusDivs(1)">&#10095;</div>
-          <?php 
-            for ($i=1; $i<=count($editorAds); $i++) {
-          ?>
-          <span class="w3-badge page-indicator w3-border w3-transparent w3-hover-white" onclick="currentDiv(<?php echo $i; ?>)"></span>
-          <?php } ?>
-        </div>
-      </div>
+        <div class="w3-display-left arrow-button left" onclick="plusDivs(-1)">&#10094;</div>
+        <div class="w3-display-right arrow-button right" onclick="plusDivs(1)">&#10095;</div>
       <h1 class="page-title">Get in touch</h1>
     </div>
     <div class="content w-container">

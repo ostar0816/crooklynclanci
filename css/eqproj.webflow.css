@@ -1577,7 +1577,25 @@ p {
   z-index: 3;
 }
 .slider-container .arrow-button {
-  font-size: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  z-index: 3;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 4px 8px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.slider-container .arrow-button:hover {
+  background-color: red;
+  color: white;
+}
+.slider-container .arrow-button.left {
+  margin-left: 5px;
+}
+.slider-container .arrow-button.right {
+  margin-right: 5px;
 }
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
