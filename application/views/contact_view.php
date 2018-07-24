@@ -55,8 +55,8 @@
         <?php } ?>
         <div class="w3-display-left arrow-button left" onclick="plusDivs(-1)">&#10094;</div>
         <div class="w3-display-right arrow-button right" onclick="plusDivs(1)">&#10095;</div>
-      <h1 class="page-title">Get in touch</h1>
-    </div>
+      </div>
+    <h1 class="page-title">Get in touch</h1>
     <div class="content w-container">
       <div class="contact-row">
         <h2 class="contact-h3">Tell us who you are and what we can do for you.</h2>

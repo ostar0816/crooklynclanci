@@ -1528,6 +1528,11 @@ p {
   height: 200px;
   position: relative;
 }
+@media (max-width: 1023px) {
+  .slider-container {
+    height: 130px;
+  }
+}
 .slider-container .figure {
   height: 100%;
   width: 100%;
@@ -2034,6 +2039,9 @@ p {
     font-size: 30px;
     line-height: 30px;
   }
+  .slider-container {
+    height: 110px;
+  }
 }
 
 @media (max-width: 479px) {
@@ -2185,6 +2193,9 @@ p {
   }
   .image-4 {
     margin-bottom: 10px;
+  }
+  .slider-container {
+    height: 75px;
   }
 }
 
